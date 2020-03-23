@@ -7,10 +7,9 @@ Original file is located at
     https://colab.research.google.com/drive/1Zv6MARGQcrBbLHyjPVVMZVnRWsRnVMpV
 """
 
-import os
+import csv
 import json
 import pandas as pd
-from urllib.request import urlopen
 
 # !wget http: // deepyeti.ucsd.edu/jianmo/amazon/sample/meta_Computers.json.gz
 
@@ -44,4 +43,4 @@ df4.iloc[0]
 df = pd.DataFrame(data, columns=['description', 'title', 'image', 'brand', 'rank', 'main_cat', 'date',
                                  'asin', 'feature', 'tech1', 'also_buy', 'price',
                                  'also_view', 'tech2', 'details', 'similar_item'])
-df.to_csv('Amazon_v1.csv', index=False, sep=';')
+df.to_csv('Amazon_v2.csv', index=False, sep=',')
